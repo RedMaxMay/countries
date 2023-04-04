@@ -135,7 +135,7 @@ export default function Info({
           </List>
           <Meta>
             <span>
-              <b>Border Countries</b>
+              <b>Border Countries: </b>
             </span>
             {!borders.length ? (
               <span>There is no border countries</span>

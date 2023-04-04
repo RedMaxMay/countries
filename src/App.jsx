@@ -21,7 +21,7 @@ function App() {
       <Header />
       <Main>
         <Routes>
-          <Route path="/" element={<HomePage countries={countries} />} />
+          <Route path="/countries" element={<HomePage countries={countries} />} />
           <Route path="/country/:name" element={<Details />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
