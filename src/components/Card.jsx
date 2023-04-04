@@ -8,6 +8,8 @@ const Wrapper = styled.article`
   cursor: pointer;
   overflow: hidden;
   transition: box-shadow 0.5s ease;
+  max-width: 300px;
+  height: 100%;
 
   &:hover {
     box-shadow: var(--shadow-hover);

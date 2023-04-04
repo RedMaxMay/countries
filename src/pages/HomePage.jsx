@@ -3,6 +3,7 @@ import Card from "../components/Card";
 import Controls from "../components/Controls";
 import List from "../components/List";
 import { Link } from "react-router-dom";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 export default function HomePage({ countries }) {
   useEffect(() => {
@@ -60,6 +61,7 @@ export default function HomePage({ countries }) {
           );
         })}
       </List>
+      <ScrollToTopButton />
     </>
   );
 }

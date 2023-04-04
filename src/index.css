@@ -21,8 +21,8 @@ body[data-theme="dark"] {
   --colors-bg: hsl(207, 26%, 17%);
   --colors-ui-base: hsl(209, 23%, 22%);
 
-  --shadow: rgba(245, 245, 245, 0.2) 0 0 8px;
-  --shadow-hover: rgba(245, 245, 245, 0.4) 0 0 8px;
+  --shadow: rgba(245, 245, 245, 0.2) 0 1px 8px;
+  --shadow-hover: rgba(245, 245, 245, 0.3) 0 2px 12px;
 }
 
 body[data-theme="light"] {
@@ -30,9 +30,11 @@ body[data-theme="light"] {
   --colors-bg: hsl(0, 0%, 98%);
   --colors-ui-base: hsl(0, 0%, 100%);
 
-  --shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
-  --shadow-hover: rgba(149, 157, 165, 0.4) 0 8px 24px;
+  --shadow: rgba(149, 157, 165, 0.2) 0 1px 4px;
+  --shadow-hover: rgba(149, 157, 165, 0.4) 0 3px 8px;
 }
+
+/* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
 
 body {
   margin: 0;
