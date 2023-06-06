@@ -40,10 +40,6 @@ const ListGroup = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-
-  /* @media (min-width: 1024px) {
-    flex-direction: row;
-  } */
 `;
 
 const List = styled.ul`
@@ -72,9 +68,14 @@ const TagGroup = styled.div`
   flex-wrap: wrap;
   gap: 20px;
 
+  & > button {
+    padding: 0;
+  }
+
   & > button > a {
     text-decoration: none;
     color: var(--colors-text);
+    padding: 0 10px;
   }
 `;
 
@@ -99,7 +100,6 @@ export default function Info({
         setNeighbors(data.map((country) => country.name.common))
       );
   }, [borders]);
-
 
   return (
     <Wrapper>
@@ -142,7 +142,9 @@ export default function Info({
             ) : (
               <TagGroup>
                 {neighbors.map((neighbor) => (
-                  <Button key={neighbor}><Link to={`/country/${neighbor}`}>{neighbor}</Link></Button>
+                  <Button key={neighbor}>
+                    <Link to={`/country/${neighbor}`}>{neighbor}</Link>
+                  </Button>
                 ))}
               </TagGroup>
             )}

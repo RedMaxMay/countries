@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled(Link).attrs({
-  to: "/countries",
+  to: "/countries/1",
 })`
   color: var(--colors-text);
   font-size: var(--fs-sm);

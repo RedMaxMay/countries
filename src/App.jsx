@@ -13,7 +13,10 @@ function App() {
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
-    axios.get(ALL_COUNTRIES).then(({ data }) => setCountries(data));
+    axios.get(ALL_COUNTRIES).then(({ data }) => {
+      data.sort((a, b) => (a.name.common < b.name.common ? -1 : 1));
+      setCountries(data);
+    });
   }, []);
 
   return (
@@ -21,7 +24,14 @@ function App() {
       <Header />
       <Main>
         <Routes>
-          <Route path="/countries" element={<HomePage countries={countries} />} />
+          <Route
+            path="/countries"
+            element={<HomePage countries={countries} />}
+          />
+          <Route
+            path="/countries/:page"
+            element={<HomePage countries={countries} />}
+          />
           <Route path="/country/:name" element={<Details />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>

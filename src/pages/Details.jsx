@@ -12,7 +12,13 @@ export default function Details() {
   const [country, setCountry] = useState(null);
 
   useEffect(() => {
-    axios.get(searchByCountry(name)).then(({ data }) => setCountry(data[0]));
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, [name]);
+
+  useEffect(() => {
+    axios
+      .get(searchByCountry(name.split("_").join("%20").toLowerCase()))
+      .then(({ data }) => setCountry(data[0]));
   }, [name]);
 
   return (
